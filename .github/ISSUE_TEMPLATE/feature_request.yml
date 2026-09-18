@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest a new key, view or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to see?
+      description: Describe the information or interaction you are missing and how you would use it in a match.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How could it look on a key? Screenshots or sketches are welcome.
+  - type: markdown
+    attributes:
+      value: |
+        Note: Game State Integration only exposes what your own client displays (no enemy positions, no teammates' money unless you are spectating), so some ideas may not be possible.

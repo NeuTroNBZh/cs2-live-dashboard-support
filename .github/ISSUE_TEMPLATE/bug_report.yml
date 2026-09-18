@@ -1,0 +1,61 @@
+name: Bug report
+description: Something does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please check the [troubleshooting section](https://github.com/NeuTroNBZh/cs2-live-dashboard-support#troubleshooting) first.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start CS2 and join a Premier match
+        2. Plant the bomb
+        3. The bomb key shows ...
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Stream Deck MK.2 / Original (15 keys)
+        - Stream Deck Mobile
+        - Stream Deck XL
+        - Stream Deck Mini / Neo
+        - Stream Deck +
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: streamdeck-version
+    attributes:
+      label: Stream Deck app version
+      placeholder: "7.0"
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 24H2"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Plugin log
+      description: Paste the relevant lines from `%APPDATA%\Elgato\StreamDeck\Plugins\com.neutronbzh.cs2dashboard.sdPlugin\logs\`.
+      render: text
