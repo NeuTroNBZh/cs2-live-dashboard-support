@@ -2,7 +2,9 @@
 
 # CS2 Live Dashboard for Stream Deck: Support
 
-Help, documentation and bug reports for **CS2 Live Dashboard**, the real-time Counter-Strike 2 dashboard for Stream Deck and Stream Deck Mobile.
+Help, documentation and bug reports for **CS2 Live Dashboard**, the real-time Counter-Strike 2 dashboard for every Stream Deck model.
+
+**English** · [Français](README.fr.md)
 
 <img src="images/dashboard.png" alt="CS2 Live Dashboard" width="760">
 
@@ -12,12 +14,23 @@ Help, documentation and bug reports for **CS2 Live Dashboard**, the real-time Co
 
 ## Getting help
 
-- **Found a bug?** [Open a bug report](../../issues/new?template=bug_report.yml).
-- **Have an idea?** [Suggest a feature](../../issues/new?template=feature_request.yml).
-- **Before reporting**, check the [troubleshooting](#troubleshooting) section below and the [known issues](../../issues).
+- **Found a bug?** [Open a bug report](https://github.com/NeuTroNBZh/cs2-live-dashboard-support/issues/new?template=bug_report.yml).
+- **Have an idea?** [Suggest a feature](https://github.com/NeuTroNBZh/cs2-live-dashboard-support/issues/new?template=feature_request.yml).
+- **Before reporting**, check the [troubleshooting](#troubleshooting) section below and the [known issues](https://github.com/NeuTroNBZh/cs2-live-dashboard-support/issues).
+
+## Installation
+
+1. Get **CS2 Live Dashboard** on [Elgato Marketplace](https://marketplace.elgato.com/stream-deck/plugins) and click **Install**.
+2. The profile for your device is created and selected automatically.
+3. Start (or restart) Counter-Strike 2. The keys light up as soon as you join a match.
+
+> [!NOTE]
+> CS2 only reads Game State Integration files at launch. If the game was already running during installation, restart it once.
+
 ## Features
 
-- **Ready-made profile**: installing the plugin creates a complete 15-key profile for Stream Deck (MK.2 / Original) and Stream Deck Mobile.
+- **Ready-made profiles for every model**: installing the plugin creates a profile tailored to each Stream Deck with LCD keys, from the 6-key Mini to the Stream Deck + XL.
+- **Stream Deck + touch strip**: four live panels (match, player, economy, stats) that you browse with the dials, and a dial to pick and buy equipment.
 - **Automatic switching**: the dashboard opens when `cs2.exe` starts and your previous profile comes back when the game closes.
 - **Zero configuration**: the Game State Integration file is installed into every CS2 library found on the machine, including custom Steam library locations.
 - **Live match view**: score with your team first, phase timer, round history and a bomb countdown to the tenth of a second, with a defuse verdict (`KIT OK`, `OK WITHOUT KIT`, `TOO LATE`) when you play CT.
@@ -35,17 +48,26 @@ Help, documentation and bug reports for **CS2 Live Dashboard**, the real-time Co
 | --- | --- |
 | Windows | 10 or 11 |
 | Stream Deck app | 6.9 or later |
-| Device | Stream Deck MK.2 / Original (15 keys) or Stream Deck Mobile. Actions can also be placed manually on any other model. |
+| Device | Any Stream Deck with LCD keys: MK.2 / Original, Mini, XL, Neo, Studio, +, + XL, Mobile, Virtual Stream Deck, Galleon 100 SD. See [Supported devices](#supported-devices). |
 | Counter-Strike 2 | Steam version |
 
-## Installation
+## Supported devices
 
-1. Get **CS2 Live Dashboard** on [Elgato Marketplace](https://marketplace.elgato.com/stream-deck/plugins) and click **Install**.
-2. The **CS2 Live Dashboard** profile is created and selected automatically.
-3. Start (or restart) Counter-Strike 2. The keys light up as soon as you join a match.
+A ready-made profile is created on installation for every Stream Deck model with LCD keys:
 
-> [!NOTE]
-> CS2 only reads Game State Integration files at launch. If the game was already running during installation, restart it once.
+| Device | Profile | Layout |
+| --- | --- | --- |
+| Stream Deck MK.2 / Original, Stream Deck Mobile, Virtual Stream Deck | CS2 Live Dashboard | 5 × 3, all 15 keys |
+| Stream Deck Mini | CS2 Live Dashboard Mini | 3 × 2: back, score, bomb, phase, health, money |
+| Stream Deck Neo | CS2 Live Dashboard Neo | 4 × 2: back, score, phase, bomb, health, money, weapon, K/D/A |
+| Stream Deck XL | CS2 Live Dashboard XL | 8 × 4, all keys grouped by topic, free space for your own actions |
+| Stream Deck Studio | CS2 Live Dashboard Studio | 16 × 2, all keys |
+| Galleon 100 SD | CS2 Live Dashboard Galleon | 3 × 4, the 12 most useful keys |
+| Stream Deck + | CS2 Live Dashboard+ | 4 × 2 keys and 4 dial panels |
+| Stream Deck + XL | CS2 Live Dashboard+ XL | 9 × 4 keys and 4 dial panels |
+
+The matching profile opens automatically on each device when CS2 starts. Stream Deck Pedal and Corsair G-keys have no screen, so no profile is provided for them, but you can still assign the buy actions to them.
+
 ## Layout
 
 | | | | | |
@@ -74,6 +96,23 @@ Keys with several views show small dots in their top-right corner. Press the key
 <div align="center">
 <img src="images/views.png" alt="Alternative views" width="640">
 </div>
+
+## Stream Deck +
+
+<div align="center">
+<img src="images/stream-deck-plus.png" alt="CS2 Live Dashboard on Stream Deck +" width="660">
+</div>
+
+The Stream Deck + profile puts 8 keys above the touch strip and gives each dial its own live panel:
+
+| Dial | Rotate | Push or tap the screen |
+| --- | --- | --- |
+| Match | Score & timer → round history with win types → rounds left to win | Next view |
+| Player | Health, armor & status → weapon, ammo & grenades | Next view |
+| Economy | Choose what to buy: full buy, rifle, armor, utility | Buy the selected item (✓ confirms) |
+| Stats | K/D/A → ADR & HS % → rating & best round → MVP & score → session | Next view |
+
+The four panels are also available individually in the action list, so you can place them on any dial.
 
 ## One-press buys
 
@@ -136,7 +175,7 @@ Profiles are provided for the 15-key Stream Deck and Stream Deck Mobile. On othe
 <details>
 <summary><b>The timers look slightly off</b></summary>
 
-CS2 sends updates at most ten times per second, and the plugin interpolates between them. The bomb timer uses the countdown sent by the game when available and falls back to the standard 40-second fuse.
+CS2 does not send phase timers to players (only to spectators), so the plugin estimates them from phase changes. It learns the real freeze time of each server as rounds go by, shows "—" for the first freeze time of a half (team intros make it longer) until it has measured one, adds 30 seconds when a team calls a tactical timeout, and hides a timer that runs past its estimate, for example during an admin pause. The bomb timer uses the standard 40-second fuse.
 
 </details>
 

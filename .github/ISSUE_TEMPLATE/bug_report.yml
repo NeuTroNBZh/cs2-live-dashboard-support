@@ -36,10 +36,15 @@ body:
       label: Device
       options:
         - Stream Deck MK.2 / Original (15 keys)
-        - Stream Deck Mobile
+        - Stream Deck Mini
         - Stream Deck XL
-        - Stream Deck Mini / Neo
+        - Stream Deck Neo
+        - Stream Deck Studio
         - Stream Deck +
+        - Stream Deck + XL
+        - Stream Deck Mobile
+        - Virtual Stream Deck
+        - Galleon 100 SD
         - Other
     validations:
       required: true
