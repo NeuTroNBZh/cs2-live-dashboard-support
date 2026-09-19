@@ -84,7 +84,7 @@ Keys with a green `$` badge buy equipment when pressed during the buy period:
 | Money | Rifle, armor + helmet, defuse kit, full utility | `KP_MULTIPLY` (numpad `*`) |
 | Armor | Armor + helmet, defuse kit (CT) | `KP_MINUS` (numpad `-`) |
 | Weapon | AK-47 or your M4 loadout variant | `KP_PLUS` (numpad `+`) |
-| Grenades | Smoke, flash, molotov / incendiary, HE | `KP_SLASH` (numpad `/`) |
+| Grenades | Smoke, flash, molotov / incendiary, HE | `KP_DIVIDE` (numpad `/`) |
 
 CS2 does not accept F13–F24 in binds, so the plugin writes these binds to `streamdeck_buy.cfg` and adds one line, `exec streamdeck_buy`, at the end of your `autoexec.cfg`. Your original `autoexec.cfg` is backed up once as `autoexec.cfg.bak-streamdeck`. When you press a buy key, the plugin sends the matching numpad keystroke to the focused window, just like a macro keyboard would.
 
@@ -128,6 +128,7 @@ Profiles are provided for the 15-key Stream Deck and Stream Deck Mobile. On othe
 - Buys only work during the buy period and inside the buy zone.
 - The CS2 window must be focused (this is the default when you use Stream Deck Mobile or a physical deck while playing).
 - Check that `exec streamdeck_buy` is present in your `autoexec.cfg`. You can also run `exec streamdeck_buy` once in the console.
+- **CS2 must not run as administrator.** Windows blocks keystrokes sent to programs running with administrator rights, so buy keys show a warning sign (⚠) instead of a check mark. This happens when Steam is started as administrator or from a script running as administrator. Close Steam and start it normally.
 - Some anti-cheat clients for third-party platforms block simulated keystrokes. The dashboard itself keeps working.
 
 </details>
