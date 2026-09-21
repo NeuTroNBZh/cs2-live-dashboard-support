@@ -4,7 +4,7 @@
 
 Help, documentation and bug reports for **CS2 Live Dashboard**, the real-time Counter-Strike 2 dashboard for every Stream Deck model.
 
-**English** · [Français](README.fr.md)
+**English** · [Français](README.fr.md) · [Get it on Elgato Marketplace](https://marketplace.elgato.com/maker/neutronbzh)
 
 <img src="images/dashboard.png" alt="CS2 Live Dashboard" width="760">
 
@@ -20,7 +20,7 @@ Help, documentation and bug reports for **CS2 Live Dashboard**, the real-time Co
 
 ## Installation
 
-1. Get **CS2 Live Dashboard** on [Elgato Marketplace](https://marketplace.elgato.com/stream-deck/plugins) and click **Install**.
+1. Open the [NeuTroNBZh page on Elgato Marketplace](https://marketplace.elgato.com/maker/neutronbzh), choose **CS2 Live Dashboard** and click **Install**.
 2. The profile for your device is created and selected automatically.
 3. Start (or restart) Counter-Strike 2. The keys light up as soon as you join a match.
 

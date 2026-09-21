@@ -4,7 +4,7 @@
 
 Aide, documentation et signalement de bugs pour **CS2 Live Dashboard**, le tableau de bord Counter-Strike 2 en temps réel pour tous les modèles de Stream Deck.
 
-[English](README.md) · **Français**
+[English](README.md) · **Français** · [Disponible sur Elgato Marketplace](https://marketplace.elgato.com/maker/neutronbzh)
 
 <img src="images/dashboard-fr.png" alt="CS2 Live Dashboard" width="760">
 
@@ -20,7 +20,7 @@ Aide, documentation et signalement de bugs pour **CS2 Live Dashboard**, le table
 
 ## Installation
 
-1. Récupère **CS2 Live Dashboard** sur [Elgato Marketplace](https://marketplace.elgato.com/stream-deck/plugins) et clique sur **Installer**.
+1. Ouvre la [page NeuTroNBZh sur Elgato Marketplace](https://marketplace.elgato.com/maker/neutronbzh), choisis **CS2 Live Dashboard** et clique sur **Installer**.
 2. Le profil de ton appareil est créé et sélectionné automatiquement.
 3. Lance (ou relance) Counter-Strike 2 : les touches s'animent dès que tu rejoins une partie.
 
